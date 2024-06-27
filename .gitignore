@@ -1,0 +1,17 @@
+.mypy_cache
+.vscode
+__pycache__
+.pytest_cache
+htmlcov
+dist
+site
+.coverage
+coverage.xml
+test.db
+log.txt
+Pipfile.lock
+env.*
+env
+docs_build
+venv
+docs.zip
