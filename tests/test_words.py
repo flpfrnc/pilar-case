@@ -14,6 +14,7 @@ missing_field_message = "Field required: "
 
 # vowel_count testing
 
+
 def test_vowel_count():
     response = client.post("/api/vowel_count", json=word_list)
     assert response.status_code == 200
@@ -34,12 +35,13 @@ def test_reject_missing_word_list():
 
 # sorting testing
 
+
 def test_sorting_words_asc():
     response = client.post("/api/sort", json=sort_word_list_asc)
     assert response.status_code == 200
     assert response.json() == ["batman", "coringa", "robin"]
 
-    
+
 def test_sorting_words_desc():
     response = client.post("/api/sort", json=sort_word_list_desc)
     assert response.status_code == 200
@@ -57,4 +59,3 @@ def test_reject_missing_order():
     response = client.post("/api/sort", json=word_list)
     assert response.status_code == 422
     assert response.json()["error"][0] == missing_field_message + "order"
-
