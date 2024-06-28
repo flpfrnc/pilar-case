@@ -16,5 +16,8 @@ async def validation_exception_handler(
     return parse_validation_errors(exc=exc)
 
 
+# a modularization was chosen instead of keeping
+# routes/services to a single file as presentation mean
+
 app.include_router(router=status_router, tags=["status"])
 app.include_router(router=word_router, prefix="/api", tags=["words"])
