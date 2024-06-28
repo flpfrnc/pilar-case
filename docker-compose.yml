@@ -1,9 +1,9 @@
 services:
   fastapi_app:
-    image: registry.gitlab.com/flpfranca/pilar-case:TAG
+    image: registry.gitlab.com/flpfranca/pilar-case:main
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "80:8000"
     restart: always
